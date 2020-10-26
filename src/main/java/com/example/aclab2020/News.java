@@ -10,11 +10,11 @@ import javax.persistence.Id;
 @NoArgsConstructor
 public class News {
     @Id
-    private int id_news;
+    private int id;
     private String name;
 
     public void setId(Integer id) {
-        this.id_news = id;
+        this.id = id;
     }
 
     public void setName(String name) {
@@ -22,7 +22,7 @@ public class News {
     }
 
     public Integer getId() {
-        return id_news;
+        return id;
     }
 
     public String getName() {

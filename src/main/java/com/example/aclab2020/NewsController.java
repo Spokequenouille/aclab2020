@@ -1,12 +1,8 @@
 package com.example.aclab2020;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.Optional;
 
 @RestController
@@ -18,17 +14,26 @@ public class NewsController {
     public Iterable<News> getNew() {
         return newsRepository.findAll();
     }
-    @GetMapping("/{newId}")
-    public Optional<News> getNew(@PathVariable("newId") int newId) {
-        return newsRepository.findById(newId);
+    @GetMapping("/{id}")
+    public Optional<News> getNew(@PathVariable int id) {
+        return newsRepository.findById(id);
     }
     @PostMapping(path="/add")
-    public Integer addNews (@RequestParam int id_news
-            , @RequestParam String name) {
+    public Integer addNews (@RequestParam int id, @RequestParam String name) {
         News news = new News();
-        news.setId(id_news);
+        news.setId(id);
         news.setName(name);
         newsRepository.save(news);
         return 200;
     }
+/*    @DeleteMapping("/delete/{id}")
+    public Integer deleteNews (@PathVariable int id) {
+        return 200;
+    }
+
+    @PatchMapping(path="/change/{id}") ?
+    @PutMapping(path="/change/{id}") ?
+    public Integer changeNews (@PathVariable int id, @RequestParam String name) {
+        return 200;
+    }*/
 }
