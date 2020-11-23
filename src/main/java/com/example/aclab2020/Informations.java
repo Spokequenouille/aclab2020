@@ -10,8 +10,11 @@ import javax.persistence.Id;
 @Entity
 @Data
 @NoArgsConstructor
-public class News {
+public class Informations {
     @Id
-    private int id;
-    private String name;
+    private int IdInfo;
+    private String LibInfo;
+    private String Fichier;
+    private String Commentaire;
+    private String DateInfo;
 }
