@@ -4,7 +4,9 @@ import Meteo from './Meteo';
 
 function App() {
   return (
+    <div class='App'>
       <Meteo/>
+    </div>
   );
 }
 
