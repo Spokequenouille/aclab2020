@@ -1,4 +1,5 @@
 import React from 'react';
+import MeteoBlock from './MeteoBlock';
 
 export default class Meteo extends React.Component {
   constructor(props) {
@@ -37,11 +38,6 @@ export default class Meteo extends React.Component {
       )
   }
 
-  dtToDate(dt) {
-    var t = new Date(dt)
-    return t.toISOString()
-  }
-
   render() {
     const { error, isLoaded, items } = this.state;
     if (error) {
@@ -51,16 +47,21 @@ export default class Meteo extends React.Component {
     } else {
       return (
         <div>
+          <MeteoBlock/>
+          <div class='first'>
+            Date : <br/>
+            Temperature : <br/>
+            {/*<img src={ "http://openweathermap.org/img/wn/" + item.weather[0].icon+ "@2x.png"}/> : {item.weather[0].description}*/}
+          </div>
           <p>{Math.random()}</p>
-        <ul>
-          {items.map(item => (
-            <li key={item.dt}>
-              Date : {(item.dt_txt)} <br/>
-              Temperature : {item.main.temp},<br/>
-              <img src={ "http://openweathermap.org/img/wn/" + item.weather[0].icon+ "@2x.png"}/> : {item.weather[0].description}
-            </li>
-          ))}
-        </ul>
+          Date : {items[0].dt_txtf}
+          <ul>
+            {items.map(item => (
+              <li key={item.dt}>
+                <MeteoBlock date={item.dt_txt} temp={item.main.temp} img={item.weather[0].icon} meteo={item.weather[0].description}/>
+              </li>
+            ))}
+          </ul>
         </div>
       );
     }
