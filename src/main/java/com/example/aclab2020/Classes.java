@@ -4,7 +4,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Data
@@ -14,16 +13,18 @@ public class Classes {
     private int IdClasse;
     private String DateClasse;
     private String HeureClasse;
-    @OneToOne
-    @JoinColumn(name = "IdPromo")
-    private Promotions IdPromo_c;
-    @OneToOne
-    @JoinColumn(name = "IdSalle")
-    private Salles IdSalle_c;
-    @OneToOne
-    @JoinColumn(name = "IdMatiere")
-    private Matieres IdMatiere_c;
-    @OneToOne
-    @JoinColumn(name = "IdProf")
-    private Professeurs IdProf_c;
+    @ManyToOne
+    @JoinColumn(name = "promo_id", referencedColumnName = "IdPromo", nullable = false)
+    private Promotions promotions;
+    @ManyToOne
+    @JoinColumn(name = "salle_id", referencedColumnName = "IdSalle", nullable = false)
+    private Salles salles;
+    @ManyToOne
+    @JoinColumn(name = "matiere_id", referencedColumnName = "IdMatiere", nullable = false)
+    private Matieres matieres;
+    @ManyToOne
+    @JoinColumn(name = "prof_id", referencedColumnName = "IdProf", nullable = false)
+    private Professeurs professeurs;
+
+
 }
