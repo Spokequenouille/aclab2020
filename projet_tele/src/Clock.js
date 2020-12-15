@@ -5,7 +5,7 @@ export default class MyClock extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-          time: new Date().toLocaleString()
+          time: new Date().toLocaleTimeString()
         };
         
       }
@@ -34,7 +34,7 @@ export default class MyClock extends React.Component{
         return(
         <div>
           <p className="App-clock">
-        The time is {this.state.time}.
+         {this.state.time}
       </p>
         </div>);
     }

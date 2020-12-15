@@ -1,6 +1,6 @@
 import logo from './Logos/logo_droit.png';
 import './App.css';
-import Coconut from './Coconut.js';
+import Info from './Informations.js';
 import MyClock from './Clock.js';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       
       <header className="App-header">
-      <Coconut/>
+      <Info/>
         <img src={logo} className="App-logo" alt="logo" />
 
       </header>
