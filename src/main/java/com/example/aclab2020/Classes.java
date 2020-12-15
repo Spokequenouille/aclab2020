@@ -1,9 +1,11 @@
 package com.example.aclab2020;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Data
@@ -12,8 +14,9 @@ public class Classes {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long IdClasse;
-    private String DateClasse;
-    private String HeureClasse;
+    @JsonFormat(pattern="dd/MM/yyyy HH:mm:ss")
+    private Date DateClasse;
+    private float Duree;
     @ManyToOne
     @JoinColumn(name = "promo_id", referencedColumnName = "IdPromo", nullable = false)
     private Promotions promotions;
