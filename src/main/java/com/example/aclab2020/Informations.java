@@ -13,12 +13,12 @@ import java.util.Date;
 public class Informations {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long IdInfo;
-    private String LibInfo;
-    private String Fichier;
-    private String Commentaire;
+    private long idInfo;
+    private String libInfo;
+    private String fichier;
+    private String commentaire;
     @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
-    private Date DateInfoDeb;
+    private Date dateInfoDeb;
     @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
-    private Date DateInfoFin;
+    private Date dateInfoFin;
 }

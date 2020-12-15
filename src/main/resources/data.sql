@@ -4,7 +4,7 @@ INSERT INTO professeurs(nom_prof,prenom_prof)
 VALUES('CIUBACIUC','Diana');
 INSERT INTO promotions(lib_promo)
 VALUES('Master III, 1ère année');
-INSERT INTO salles(adresse,lib_salle,nbre_place)
+INSERT INTO salles(adresse,lib_salle,nbre_places)
 VALUES('46 rue du port','RZ205',45);
 INSERT INTO informations(lib_info,fichier,commentaire,date_info_deb,date_info_fin)
 VALUES('Nuit de l info',null,'Ca va être fun lol','2020-12-03 16:39:00','2020-12-04 08:02:00');

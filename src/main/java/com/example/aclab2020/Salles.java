@@ -11,8 +11,8 @@ import javax.persistence.*;
 public class Salles {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long IdSalle;
-    private String LibSalle;
-    private int NbrePlace;
-    private String Adresse;
+    private long idSalle;
+    private String libSalle;
+    private int nbrePlaces;
+    private String adresse;
 }

@@ -11,7 +11,7 @@ import javax.persistence.*;
 public class Matieres {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long IdMatiere;
-    private int IdClasse;
-    private String LibMatiere;
+    private long idMatiere;
+    private int idClasse;
+    private String libMatiere;
 }

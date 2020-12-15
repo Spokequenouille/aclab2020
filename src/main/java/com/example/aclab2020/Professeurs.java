@@ -11,7 +11,7 @@ import javax.persistence.*;
 public class Professeurs {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long IdProf;
-    private String NomProf;
-    private String PrenomProf;
+    private long idProf;
+    private String nomProf;
+    private String prenomProf;
 }

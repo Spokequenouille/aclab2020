@@ -11,6 +11,6 @@ import javax.persistence.*;
 public class Promotions {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long IdPromo;
-    private String LibPromo;
+    private long idPromo;
+    private String libPromo;
 }

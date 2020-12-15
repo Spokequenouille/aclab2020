@@ -13,22 +13,22 @@ import java.util.Date;
 public class Classes {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long IdClasse;
+    private long idClasse;
     @JsonFormat(pattern="dd/MM/yyyy HH:mm:ss")
-    private Date DateClasse;
-    private float Duree;
+    private Date dateClasse;
+    private float duree;
     @ManyToOne
     @JoinColumn(name = "promo_id", referencedColumnName = "IdPromo", nullable = false)
-    private Promotions promotions;
+    private Promotions promotion;
     @ManyToOne
     @JoinColumn(name = "salle_id", referencedColumnName = "IdSalle", nullable = false)
-    private Salles salles;
+    private Salles salle;
     @ManyToOne
     @JoinColumn(name = "matiere_id", referencedColumnName = "IdMatiere", nullable = false)
-    private Matieres matieres;
+    private Matieres matiere;
     @ManyToOne
     @JoinColumn(name = "prof_id", referencedColumnName = "IdProf", nullable = false)
-    private Professeurs professeurs;
+    private Professeurs professeur;
 
 
 }
