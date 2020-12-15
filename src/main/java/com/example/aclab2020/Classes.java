@@ -10,7 +10,8 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class Classes {
     @Id
-    private int IdClasse;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long IdClasse;
     private String DateClasse;
     private String HeureClasse;
     @ManyToOne
