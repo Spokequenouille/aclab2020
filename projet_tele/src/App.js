@@ -8,12 +8,15 @@ function App() {
     <div className="App">
       
       <header className="App-header">
-      <Info/>
+        <aside className="App-aside">
+      
+      <MyClock/>
         <img src={logo} className="App-logo" alt="logo" />
-
+      </aside>
+      <Info/>
       </header>
       <footer>
-      <MyClock/>
+      
       </footer>
     </div>
   );
