@@ -13,5 +13,23 @@ code {
 }
 
 .meteoblock {
-  background-color: aqua;
+  background-color: grey;
+  font-weight: bold;
+  text-align: right;
+}
+
+.temperature {
+  font-weight: bold;
+  text-align: right;
+  margin: 0;
+}
+
+.day {
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
+Card {
+  
 }
