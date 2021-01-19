@@ -9,14 +9,20 @@ function App() {
       
       <header className="App-header">
         <aside className="App-aside">
-      
-      <MyClock/>
-        <img src={logo} className="App-logo" alt="logo" />
-      </aside>
-      <Info/>
+          <img src={logo} className="App-logo" alt="logo" />
+          <div className="App-aside-data">
+            <MyClock/>
+            <div className="App-aside-meteo">
+            METEO
+            </div>
+          </div>
+        </aside>
+        <div className="App-infos" >
+          <Info/>
+        </div>
       </header>
-      <footer>
-      
+      <footer className="App-footer-scrolling">
+      INFO DEROULANTE
       </footer>
     </div>
   );

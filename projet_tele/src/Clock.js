@@ -32,8 +32,9 @@ class MyClock extends Component {
     const months = ["Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Novembre", "Decembre"]
     const days = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"]
   return (
-      <div className='timeclock-main'>
-        <h3 className='timeclock-text'>{this.state.time} <div><br /></div> {days[this.state.day]} {this.state.date} {months[this.state.month]}  {this.state.year} </h3>
+      <div className='App-clock'>
+        <h3 >{this.state.time} </h3> 
+        <div className='App-clock-date'> {days[this.state.day]} {this.state.date} {months[this.state.month]}  {this.state.year}</div> 
       </div>
     )
   }

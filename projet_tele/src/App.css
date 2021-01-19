@@ -3,13 +3,9 @@
 }
 
 .App-logo {
-  height: 20vmin;
+  width: 90%;
   pointer-events: none;
-  position: absolute;
-  top: 8px;
-  left: 16px;
-  font-size: 18px;
-  
+  padding: 10px 5%;
 }
 
 /* @media (prefers-reduced-motion: no-preference) { 
@@ -20,17 +16,50 @@
 
 .App-header {
   background-color: #FFFFFF;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   font-size: calc(10px + 2vmin);
   color: black;
 }
 
+.App-aside{
+width: 35%;
+}
+.App-aside-data{
+  background-color: #55544F;
+  color: #FFFFFF;
+  /* min-height: 100vh; */
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.App-aside-meteo{
+  min-height: 280px;
+}
 
+.App-infos{
+  background-color: #D0232A;
+  color: #FFFFFF;
+  min-height: 100Vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.App-footer-scrolling{
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  background-color: #FFFFFF;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .App-link {
   color: #61dafb;
 }
