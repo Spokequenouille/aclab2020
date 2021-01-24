@@ -2,6 +2,7 @@ import logo from './Logos/logo_droit.png';
 import './App.css';
 import Info from './Informations.js';
 import MyClock from './Clock.js';
+import MyMarquee from './Marquee.js';
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
         </div>
       </header>
       <footer className="App-footer-scrolling">
-      INFO DEROULANTE
+      <MyMarquee/>
       </footer>
     </div>
   );
