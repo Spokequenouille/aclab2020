@@ -21,9 +21,40 @@ public class PromotionsController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Promotions> GetThisPromo(@PathVariable int id) throws ResourceNotFoundException {
-        Promotions i = promotionsRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Promotion non trouvée :: " + id));
+    public ResponseEntity<Promotions> GetThisPromo(@PathVariable long id) {
+        Promotions i = promotionsRepository.getPromoByIdPromo(id);
+        return ResponseEntity.ok().body(i);
+    }
+
+    // Je définis sur /promotions/{{id}} la suppression d'une promotion par son id [DEL]
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deletePromotion (@PathVariable long id) {
+        Promotions i = promotionsRepository.getPromoByIdPromo(id);
+        promotionsRepository.delete(i);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
+    // Je définis sur /promotions/{{id}} la modification d'une promotion par son id [PUT]
+    @PutMapping(path="/{id}")
+    public ResponseEntity<Promotions> updatePromotion (@PathVariable long id, @RequestParam(required = false) String libPromo) {
+        Promotions i = promotionsRepository.getPromoByIdPromo(id);
+        if (i == null) return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        if (libPromo != null) {
+            i.setLibPromo(libPromo);
+        }
+
+        promotionsRepository.save(i);
+        return ResponseEntity.ok().body(i);
+    }
+
+    // Je définis sur /promotions/add la création d'une promotion [POST]
+    @PostMapping("/add")
+    public ResponseEntity<Promotions> addPromotion(@RequestParam String libPromo) {
+        Promotions i = new Promotions();
+
+        i.setLibPromo(libPromo);
+
+        promotionsRepository.save(i);
         return ResponseEntity.ok().body(i);
     }
 }

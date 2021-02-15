@@ -6,7 +6,8 @@ import org.springframework.data.rest.webmvc.ResourceNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
+import org.springframework.format.annotation.DateTimeFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -21,9 +22,55 @@ public class InformationsController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Informations> GetThisInfo(@PathVariable int id) throws ResourceNotFoundException {
-        Informations i = informationsRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Information non trouvée :: " + id));
+    public ResponseEntity<Informations> GetThisInfo(@PathVariable long id) {
+        Informations i = informationsRepository.getInfoByIdInfo(id);
+        return ResponseEntity.ok().body(i);
+    }
+
+    // Je définis sur /informations/{{id}} la suppression d'une information par son id [DEL]
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteInfo (@PathVariable long id) {
+        Informations i = informationsRepository.getInfoByIdInfo(id);
+        informationsRepository.delete(i);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
+    // Je définis sur /informations/{{id}} la modification d'une information par son id [PUT]
+    @PutMapping(path="/{id}")
+    public ResponseEntity<Informations> updateInfo (@PathVariable long id, @RequestParam(required = false) String libInfo, @RequestParam(required = false) String fichier, @RequestParam(required = false) String commentaire, @RequestParam(required = false) @DateTimeFormat(pattern="dd/MM/yyyy HH:mm:ss") Date dateInfoDeb, @RequestParam(required = false) @DateTimeFormat(pattern="dd/MM/yyyy HH:mm:ss") Date dateInfoFin) {
+        Informations i = informationsRepository.getInfoByIdInfo(id);
+
+        if (libInfo != null) {
+            i.setLibInfo(libInfo);
+        }
+        if (fichier != null) {
+            i.setFichier(fichier);
+        }
+        if (commentaire != null) {
+            i.setCommentaire(commentaire);
+        }
+        if (dateInfoDeb != null) {
+            i.setDateInfoDeb(dateInfoDeb);
+        }
+        if (dateInfoFin != null) {
+            i.setDateInfoFin(dateInfoFin);
+        }
+        informationsRepository.save(i);
+        return ResponseEntity.ok().body(i);
+    }
+
+    // Je définis sur /informations/add la création d'une information [POST]
+    @PostMapping("/add")
+    public ResponseEntity<Informations> addInfo(@RequestParam String libInfo, @RequestParam String fichier, @RequestParam String commentaire, @RequestParam @DateTimeFormat(pattern="dd/MM/yyyy HH:mm:ss") Date dateInfoDeb, @RequestParam @DateTimeFormat(pattern="dd/MM/yyyy HH:mm:ss") Date dateInfoFin) {
+        Informations i = new Informations();
+
+            i.setLibInfo(libInfo);
+            i.setFichier(fichier);
+            i.setCommentaire(commentaire);
+            i.setDateInfoDeb(dateInfoDeb);
+            i.setDateInfoFin(dateInfoFin);
+
+        informationsRepository.save(i);
         return ResponseEntity.ok().body(i);
     }
 }
