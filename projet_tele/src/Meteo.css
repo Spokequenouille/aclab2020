@@ -1,0 +1,45 @@
+.meteoblock {
+    
+    font-weight: bold;
+    text-align: center;
+    
+  }
+  
+  .temperature {
+    font-weight: bold;
+    text-align: right;
+    margin: 5px 5px 0 0;
+  }
+  
+  .day {
+    font-weight: 600;
+    /* text-align: center; */
+    margin: 0;
+  }
+  
+  .card-text {
+    border-radius: 20px;
+    background-color: grey;
+    text-align: center;
+    margin: 10px 0 5px;
+  }
+  .card-text img{
+      width: 100%;
+  }
+
+  .first_meteo{
+      width: 45%;
+      margin: 0 auto;
+      font-size: calc(2px + 2vmin);
+    }
+    
+  .other_meteo{
+      display: flex;
+      flex-direction: row;
+      place-content: space-around;
+      padding: 10px 0;
+  }
+  .other_meteo .meteoblock{
+      width: 25%;
+      font-size: calc(2px + 2vmin);
+  }

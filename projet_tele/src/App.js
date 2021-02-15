@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       
-      <header className="App-header">
+      <div className="App-header">
         <aside className="App-aside">
           <img src={logo} className="App-logo" alt="logo" />
           <div className="App-aside-data">
@@ -22,7 +22,7 @@ function App() {
         <div className="App-infos" >
           <Info/>
         </div>
-      </header>
+      </div>
       <footer >
       <MoveStuffAround/>
       </footer>

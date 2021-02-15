@@ -3,6 +3,7 @@ import { Card } from 'react-bootstrap';
 import Moment from 'moment';
 import 'moment/locale/fr';
 import Image from 'react-bootstrap/Image';
+import './Meteo.css';
 
 export default class MeteoBlock extends React.Component {
   constructor(props) {
@@ -18,10 +19,10 @@ export default class MeteoBlock extends React.Component {
           {/*Date : {(this.props.date)} <br/>
           Temperature : {this.props.temp}<br/>
           <img src={ "http://openweathermap.org/img/wn/" + this.props.img+ "@2x.png"}/> : {this.props.meteo}*/}
-          <div class="col-6 col-offset-3">
+          <div>
           <Card
             bg="info"
-            style={{ width: '10rem' }}
+            
           >
             <Card.Body>
               <Card.Text>

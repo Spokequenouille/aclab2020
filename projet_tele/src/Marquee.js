@@ -1,5 +1,6 @@
 import Ticker from "react-ticker";
 import React, {Component} from 'react';
+import './Marquee.css'
 
 class MoveStuffAround extends Component {
   render() {
