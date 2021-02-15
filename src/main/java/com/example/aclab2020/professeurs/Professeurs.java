@@ -1,4 +1,4 @@
-package com.example.aclab2020;
+package com.example.aclab2020.professeurs;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

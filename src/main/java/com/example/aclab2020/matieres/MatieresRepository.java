@@ -1,14 +1,14 @@
-package com.example.aclab2020;
+package com.example.aclab2020.matieres;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-public interface InformationsRepository extends JpaRepository<Informations, Integer>{
+public interface MatieresRepository extends JpaRepository<Matieres, Integer> {
     // Résultat custom' avec query générée manuellement
-    @Query(value = "SELECT * FROM informations WHERE id_info = :id",
+    @Query(value = "SELECT * FROM matieres WHERE id_matiere = :id",
             nativeQuery = true)
-    Informations getInfoByIdInfo(
+    Matieres getMatiereByIdMatiere(
             @Param("id") long id
     );
 }

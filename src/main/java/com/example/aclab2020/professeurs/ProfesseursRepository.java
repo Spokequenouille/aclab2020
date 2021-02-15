@@ -1,14 +1,14 @@
-package com.example.aclab2020;
+package com.example.aclab2020.professeurs;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-public interface PromotionsRepository extends JpaRepository<Promotions, Integer> {
+public interface ProfesseursRepository extends JpaRepository<Professeurs, Integer> {
     // Résultat custom' avec query générée manuellement
-    @Query(value = "SELECT * FROM promotions WHERE id_promo = :id",
+    @Query(value = "SELECT * FROM professeurs WHERE id_prof = :id",
             nativeQuery = true)
-    Promotions getPromoByIdPromo(
+    Professeurs getProfByIdProf(
             @Param("id") long id
     );
 }

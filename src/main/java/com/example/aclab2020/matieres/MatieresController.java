@@ -1,4 +1,4 @@
-package com.example.aclab2020;
+package com.example.aclab2020.matieres;
 
 import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;

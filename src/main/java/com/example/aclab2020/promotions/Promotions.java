@@ -1,4 +1,4 @@
-package com.example.aclab2020;
+package com.example.aclab2020.promotions;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

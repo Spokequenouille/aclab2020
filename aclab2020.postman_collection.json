@@ -1,0 +1,720 @@
+{
+	"info": {
+		"_postman_id": "8b78ba76-a809-4e06-bfb8-4277c3d032b5",
+		"name": "aclab2020",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getClasses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/classes",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"classes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getClasse {{id}}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/classes/{{id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"classes",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postClasses",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/classes/add?dateClasse=15/02/2021 18:00:00&duree=2&matiere_id=2&prof_id=2&promo_id=2&salle_id=2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"classes",
+						"add"
+					],
+					"query": [
+						{
+							"key": "dateClasse",
+							"value": "15/02/2021 18:00:00"
+						},
+						{
+							"key": "duree",
+							"value": "2"
+						},
+						{
+							"key": "matiere_id",
+							"value": "2"
+						},
+						{
+							"key": "prof_id",
+							"value": "2"
+						},
+						{
+							"key": "promo_id",
+							"value": "2"
+						},
+						{
+							"key": "salle_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "putClasses",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/classes/{{id}}?dateClasse=16/02/2021 18:00:00&duree=3",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"classes",
+						"{{id}}"
+					],
+					"query": [
+						{
+							"key": "dateClasse",
+							"value": "16/02/2021 18:00:00"
+						},
+						{
+							"key": "duree",
+							"value": "3"
+						},
+						{
+							"key": "matiere_id",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "prof_id",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "promo_id",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "salle_id",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delClasse {{id}}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/classes/{{id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"classes",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getInfos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/informations",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"informations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getInfo {{id}}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/informations/{{id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"informations",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postInfo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/informations/add?libInfo=Oulala je suis une nouvelle info&fichier=https://www.google.com&commentaire=Ceci est un commentaire&dateInfoDeb=16/02/2021 18:00:00&dateInfoFin=16/02/2021 18:30:00",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"informations",
+						"add"
+					],
+					"query": [
+						{
+							"key": "libInfo",
+							"value": "Oulala je suis une nouvelle info"
+						},
+						{
+							"key": "fichier",
+							"value": "https://www.google.com"
+						},
+						{
+							"key": "commentaire",
+							"value": "Ceci est un commentaire"
+						},
+						{
+							"key": "dateInfoDeb",
+							"value": "16/02/2021 18:00:00"
+						},
+						{
+							"key": "dateInfoFin",
+							"value": "16/02/2021 18:30:00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "putInfo {{id}}",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/informations/{{id}}?libInfo=Oulala je suis un info mise à jour&fichier=https://www.google.com&commentaire=Ceci est un commentaire&dateInfoDeb=16/02/2021 18:00:00&dateInfoFin=16/02/2021 18:30:00",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"informations",
+						"{{id}}"
+					],
+					"query": [
+						{
+							"key": "libInfo",
+							"value": "Oulala je suis un info mise à jour"
+						},
+						{
+							"key": "fichier",
+							"value": "https://www.google.com"
+						},
+						{
+							"key": "commentaire",
+							"value": "Ceci est un commentaire"
+						},
+						{
+							"key": "dateInfoDeb",
+							"value": "16/02/2021 18:00:00"
+						},
+						{
+							"key": "dateInfoFin",
+							"value": "16/02/2021 18:30:00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delInfo {{id}}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/informations/{{id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"informations",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSalles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/salles",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"salles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSalle {{id}}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/salles/{{id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"salles",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postSalle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/salles/add?libSalle=RS2036&nbrePlaces=26&adresse=49 rue du port",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"salles",
+						"add"
+					],
+					"query": [
+						{
+							"key": "libSalle",
+							"value": "RS2036"
+						},
+						{
+							"key": "nbrePlaces",
+							"value": "26"
+						},
+						{
+							"key": "adresse",
+							"value": "49 rue du port"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "putSalle {{id}}",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/salles/{{id}}?libSalle=RS203&nbrePlaces=25&adresse=49 rue du port",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"salles",
+						"{{id}}"
+					],
+					"query": [
+						{
+							"key": "libSalle",
+							"value": "RS203"
+						},
+						{
+							"key": "nbrePlaces",
+							"value": "25"
+						},
+						{
+							"key": "adresse",
+							"value": "49 rue du port"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delSalle {{id}}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/salles/{{id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"salles",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMatieres",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/matieres",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"matieres"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMatiere {{id}}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/matieres/{{id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"matieres",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postMatiere",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/matieres/add?libMatiere=Je suis une nouvelle classe 2&idClasse=1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"matieres",
+						"add"
+					],
+					"query": [
+						{
+							"key": "libMatiere",
+							"value": "Je suis une nouvelle classe 2"
+						},
+						{
+							"key": "idClasse",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "putMatiere {{id}}",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/matieres/{{id}}?libMatiere=J'ai changé le libellé 2!",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"matieres",
+						"{{id}}"
+					],
+					"query": [
+						{
+							"key": "libMatiere",
+							"value": "J'ai changé le libellé 2!"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delMatiere {{id}}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/matieres/{{id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"matieres",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProfs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/professeurs",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"professeurs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProf {{id}}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/professeurs/{{id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"professeurs",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postProf",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/professeurs/add?nomProf=JACQUES&prenomProf=Julie",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"professeurs",
+						"add"
+					],
+					"query": [
+						{
+							"key": "nomProf",
+							"value": "JACQUES"
+						},
+						{
+							"key": "prenomProf",
+							"value": "Julie"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "putProf {{id}}",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/professeurs/{{id}}?nomProf=Beaussan",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"professeurs",
+						"{{id}}"
+					],
+					"query": [
+						{
+							"key": "nomProf",
+							"value": "Beaussan"
+						},
+						{
+							"key": "prenomProf",
+							"value": "Nicolas",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delProf {{id}}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/professeurs/{{id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"professeurs",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPromos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/promotions",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"promotions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPromo {{id}}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/promotions/{{id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"promotions",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "putPromo {{id}}",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/promotions/{{id}}?libPromo=Updated promo",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"promotions",
+						"{{id}}"
+					],
+					"query": [
+						{
+							"key": "libPromo",
+							"value": "Updated promo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postPromo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/promotions/add?libPromo=Nouvelle promo",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"promotions",
+						"add"
+					],
+					"query": [
+						{
+							"key": "libPromo",
+							"value": "Nouvelle promo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delPromo {{id}}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/promotions/{{id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"promotions",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

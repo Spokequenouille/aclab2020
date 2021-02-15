@@ -1,15 +1,16 @@
-package com.example.aclab2020;
+package com.example.aclab2020.classes;
 
-import javassist.NotFoundException;
+import com.example.aclab2020.matieres.MatieresRepository;
+import com.example.aclab2020.professeurs.ProfesseursRepository;
+import com.example.aclab2020.promotions.PromotionsRepository;
+import com.example.aclab2020.salles.SallesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.rest.webmvc.ResourceNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.format.annotation.DateTimeFormat;
 import java.util.Date;
 import java.util.List;
-import java.util.Optional;
 
 
 @RestController

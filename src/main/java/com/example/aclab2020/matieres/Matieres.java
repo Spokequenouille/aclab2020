@@ -1,4 +1,4 @@
-package com.example.aclab2020;
+package com.example.aclab2020.matieres;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,11 +8,10 @@ import javax.persistence.*;
 @Entity
 @Data
 @NoArgsConstructor
-public class Salles {
+public class Matieres {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idSalle;
-    private String libSalle;
-    private int nbrePlaces;
-    private String adresse;
+    private long idMatiere;
+    private long idClasse;
+    private String libMatiere;
 }

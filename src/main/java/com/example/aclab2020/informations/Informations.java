@@ -1,4 +1,4 @@
-package com.example.aclab2020;
+package com.example.aclab2020.informations;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
