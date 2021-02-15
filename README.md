@@ -143,7 +143,7 @@ Le fichier postman est à la racine du projet et a pour nom **aclab2020.postman_
 
 **N/A**
 
-[Lien vers Sonar Cloud]()
+[Lien vers Sonar Cloud](https://sonarcloud.io/project/configuration?id=Spokequenouille_aclab2020)
 
 ---
 
