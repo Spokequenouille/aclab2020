@@ -16,15 +16,12 @@ services:
       - CHOKIDAR_USEPOLLING=true
       
       
-  db:
+  mysql:
     image: mysql:5.7
-    ports:
-      - "3306:3306"
     restart: always
-    environment:
-      MYSQL_DATABASE: aclab2020
-      MYSQL_USER: aclab2020
-      MYSQL_PASSWORD: aclab2020
-      MYSQL_ROOT_PASSWORD: root
-    volumes:
-      - db-data:/var/lib/mysql
+    environment: 
+      MYSQL_ROOT_PASSWORD: secret
+    volumes: 
+      - ./data:/var/lib/mysql 
+    ports: 
+      - 3306:3306
