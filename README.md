@@ -20,7 +20,25 @@ Johann DE ALMEIDA
 
 ## Installation et lancement
 
-**N/A**
+Nous allons tout d'abord commencer par créer une network pour que les deux dockers communiquent ensemble.
+
+`docker network create aclab`
+
+### Docker MySql
+
+Pour lancer le docker MySql veuillez procéder comme suit :
+
+`docker container run --network aclab -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=admin123 -e MYSQL_DATABASE=aclab2020 -e MYSQL_USER=springuser -e MYSQL_PASSWORD=ThePassword -d mysql:5.7`
+
+### Docker API
+
+Il faut tout d'abord créer l'image docker.
+
+`docker build -t aclab-2020 .`
+
+On peut ensuite lancer l'image docker comme suit :
+
+`docker container run --network aclab -p 8080:8080 --name springboot-api aclab-2020`
 
 ___
 
