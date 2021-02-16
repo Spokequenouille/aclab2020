@@ -1,5 +1,6 @@
 package com.example.aclab2020.classes;
 
+import com.example.aclab2020.matieres.Matieres;
 import com.example.aclab2020.matieres.MatieresRepository;
 import com.example.aclab2020.professeurs.ProfesseursRepository;
 import com.example.aclab2020.promotions.PromotionsRepository;
@@ -18,9 +19,13 @@ import java.util.List;
 public class ClassesController {
     @Autowired
     private ClassesRepository classesRepository;
+    @Autowired
     private MatieresRepository matieresRepository;
+    @Autowired
     private ProfesseursRepository professeursRepository;
+    @Autowired
     private PromotionsRepository promotionsRepository;
+    @Autowired
     private SallesRepository sallesRepository;
     @GetMapping
     public List<Classes> getClasses() {
@@ -70,6 +75,5 @@ public class ClassesController {
         classesRepository.save(i);
         return ResponseEntity.ok().body(i);
     }
-
 
 }
