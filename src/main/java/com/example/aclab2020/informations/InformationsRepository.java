@@ -6,9 +6,9 @@ import org.springframework.data.repository.query.Param;
 
 public interface InformationsRepository extends JpaRepository<Informations, Integer>{
     // Résultat custom' avec query générée manuellement
-    @Query(value = "SELECT * FROM informations WHERE id_info = :id",
+    @Query(value = "SELECT * FROM informations WHERE id = :id",
             nativeQuery = true)
-    Informations getInfoByIdInfo(
+    Informations getInfoById(
             @Param("id") long id
     );
 }

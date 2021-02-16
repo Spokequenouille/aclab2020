@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.format.annotation.DateTimeFormat;
 import java.util.Date;
 import java.util.List;
-
+@CrossOrigin(origins = "http://localhost:3000", maxAge = 3600)
 @RestController
 @RequestMapping(path = "/informations")
 public class InformationsController {
@@ -20,14 +20,14 @@ public class InformationsController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Informations> GetThisInfo(@PathVariable long id) {
-        Informations i = informationsRepository.getInfoByIdInfo(id);
+        Informations i = informationsRepository.getInfoById(id);
         return ResponseEntity.ok().body(i);
     }
 
     // Je définis sur /informations/{{id}} la suppression d'une information par son id [DEL]
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteInfo (@PathVariable long id) {
-        Informations i = informationsRepository.getInfoByIdInfo(id);
+        Informations i = informationsRepository.getInfoById(id);
         informationsRepository.delete(i);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
@@ -35,7 +35,7 @@ public class InformationsController {
     // Je définis sur /informations/{{id}} la modification d'une information par son id [PUT]
     @PutMapping(path="/{id}")
     public ResponseEntity<Informations> updateInfo (@PathVariable long id, @RequestParam(required = false) String libInfo, @RequestParam(required = false) String fichier, @RequestParam(required = false) String commentaire, @RequestParam(required = false) @DateTimeFormat(pattern="dd/MM/yyyy HH:mm:ss") Date dateInfoDeb, @RequestParam(required = false) @DateTimeFormat(pattern="dd/MM/yyyy HH:mm:ss") Date dateInfoFin) {
-        Informations i = informationsRepository.getInfoByIdInfo(id);
+        Informations i = informationsRepository.getInfoById(id);
 
         if (libInfo != null) {
             i.setLibInfo(libInfo);
@@ -57,7 +57,7 @@ public class InformationsController {
     }
 
     // Je définis sur /informations/add la création d'une information [POST]
-    @PostMapping("/add")
+    @PostMapping("/")
     public ResponseEntity<Informations> addInfo(@RequestParam String libInfo, @RequestParam String fichier, @RequestParam String commentaire, @RequestParam @DateTimeFormat(pattern="dd/MM/yyyy HH:mm:ss") Date dateInfoDeb, @RequestParam @DateTimeFormat(pattern="dd/MM/yyyy HH:mm:ss") Date dateInfoFin) {
         Informations i = new Informations();
 
