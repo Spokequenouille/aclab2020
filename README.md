@@ -1,3 +1,7 @@
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/dashboard?id=Spokequenouille_aclab2020)
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Spokequenouille_aclab2020&metric=alert_status)](https://sonarcloud.io/dashboard?id=Johann-gif_my-fridge)
+![Dependabot](https://badgen.net/github/dependabot/spokequenouille/aclab2020)
 ![Top](https://img.shields.io/github/languages/top/Spokequenouille/aclab2020)
 
 # aclab2020
