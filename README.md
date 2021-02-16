@@ -28,7 +28,7 @@ Nous allons tout d'abord commencer par créer une network pour que les deux dock
 
 Pour lancer le docker MySql veuillez procéder comme suit :
 
-`docker container run --network aclab -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=admin123 -e MYSQL_DATABASE=aclab2020 -e MYSQL_USER=springuser -e MYSQL_PASSWORD=ThePassword -d mysql:5.7`
+`docker container run --network aclab -p 3306:3306 --name mysql-standalone -e MYSQL_ROOT_PASSWORD=admin123 -e MYSQL_DATABASE=aclab2020 -e MYSQL_USER=springuser -e MYSQL_PASSWORD=ThePassword -d mysql:5.7`
 
 ### Docker API
 
