@@ -1,5 +1,5 @@
 .App-clock{
-    margin: 2vw 2vw 0;
+    margin: 1vw 2vw 0;
 }
 
 .App-clock::after {
@@ -8,7 +8,7 @@
     height: 5px;
     background-color: #FFFFFF;
     display: block;
-    margin: 40px auto 10px;
+    margin: 30px auto 10px;
 }
 
 .App-clock h3{
@@ -17,6 +17,6 @@
     margin: 20px 0
 }
 .App-clock-date{
-    font-size: 28px; 
+    font-size: 22px; 
     line-height: 26px;
 }

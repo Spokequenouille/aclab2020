@@ -6,6 +6,7 @@
   width: 90%;
   pointer-events: none;
   padding: 10px 5%;
+  background-color: white;
 }
 
 /* @media (prefers-reduced-motion: no-preference) { 
@@ -15,10 +16,11 @@
 }*/
 
 .App-header {
-  background-color: #FFFFFF;
+  
+background-color: #55544F;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  /* align-items: center; */
   /* justify-content: center; */
   font-size: calc(10px + 2vmin);
   color: black;
@@ -27,21 +29,21 @@
 
 .App-aside{
 /* width: 35%; */
+/* height: 83vh; */
 }
 .App-aside-data{
-  background-color: #55544F;
   color: #FFFFFF;
   display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 75vh;
+    /* height: 75vh; */
 }
 .App-aside-meteo{
   /* min-height: 280px; */
 }
 
 .App-infos{
-  background-color: #D0232A;
+  background-color: #31A6CC;
   color: #FFFFFF;
   min-height: 90Vh;
   width: 100%;

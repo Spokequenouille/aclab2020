@@ -1,4 +1,4 @@
-import logo from './Logos/logo_droit.png';
+import logo from './Logos/logo_fges.png';
 import './App.css';
 import Info from './Informations.js';
 import MyClock from './Clock.js';
