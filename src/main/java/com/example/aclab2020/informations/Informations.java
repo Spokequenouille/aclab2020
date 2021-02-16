@@ -13,7 +13,7 @@ import java.util.Date;
 public class Informations {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private long idInfo;
     private String libInfo;
     private String fichier;
     private String commentaire;
